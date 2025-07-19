@@ -1,0 +1,646 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Transaction History - Wellington Private Bank</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: #f5f2ed;
+      color: #2b2b2b;
+    }
+
+    header {
+      background-color: #1c1c1c;
+      color: #d4af37;
+      padding: 30px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      background: #2a2a2a;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #f5f2ed;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      color: #4b4b4b;
+      margin-bottom: 25px;
+      text-align: center;
+      font-size: 2em;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 1.1em;
+    }
+    th, td {
+      padding: 15px 12px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f5f2ed;
+      color: #555;
+      font-weight: bold;
+    }
+
+    tbody tr:hover {
+      background-color: #f0ead6;
+    }
+
+    .amount-positive {
+      color: #2a7a2a;
+      font-weight: bold;
+    }
+
+    .amount-negative {
+      color: #b23434;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #1c1c1c;
+      color: #999;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Wellington Private Bank</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Transfer</a>
+    <a href="#">Portfolio</a>
+    <a href="#">Transaction History</a>
+    <a href="#">Settings</a>
+  </nav>
+
+  <div class="container">
+    <h2>Transaction History</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Description</th>
+          <th>Type</th>
+          <th>Amount</th>
+          <th>Balance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2025-05-28</td>
+          <td>Salary Credit</td>
+          <td>Credit</td>
+          <td class="amount-positive">+ 8,000.00</td>
+          <td>2,450.00</td>
+    <td>Electricity Bill Payment</td>
+          <td>Debit</td>
+          <td class="amount debit">-150.75</td>
+          <td>16,500.00</td>
+        </tr>
+        <tr>
+          <td>2025-06-15</td>
+          <td>Transfer to John Doe</td>
+          <td>Debit</td>
+          <td class="amount debit">-1,200.00</td>
+          <td>16,650.75</td>
+        </tr>
+        <tr>
+          <td>2025-06-10</td>
+          <td>Dividend Payment</td>
+          <td>Credit</td>
+          <td class="amount credit">+400.00</td>
+          <td>17,850.75</td>
+        </tr>
+        <tr>
+          <td>2025-06-08</td>
+          <td>Groceries</td>
+          <td>Debit</td>
+          <td class="amount debit">-300.25</td>
+          <td>17,450.75</td>
+        </tr>
+        <tr>
+          <td>2025-06-10</td>
+          <td>Salary Credit</td>
+          <td>Credit</td>
+          <td class="amount-positive">+ 8,000.00</td>
+          <td>2,450,000.00</td>
+    <td>Electricity Bill Payment</td>
+          <td>Debit</td>
+          <td class="amount debit">-150.75</td>
+          <td>16,500.00</td>
+        </tr>
+        <tr>
+          <td>2023-11-25</td>
+          <td>Groceries</td>
+          <td>Debit</td>
+          <td class="amount debit">-2,000.00</td>
+          <td>,556.00</td>
+        </tr>
+         <tr>
+          <td>2023-11-17</td>
+          <td>Bradley Payment</td>
+          <td>Credit</td>
+          <td class="amount credit">+8,550.00</td>
+          <td>247,606.00</td>
+        </tr>
+        <tr>
+          <td>2023-11-12</td>
+          <td>Groceries</td>
+          <td>Debit</td>
+          <td class="amount debit">-1,200.00</td>
+          <td>239,556.00</td>
+        </tr>
+        <tr>
+        <tr>
+          <td>2023-11-09</td>
+          <td>Transfer to Pamela</td>
+          <td>Debit</td>
+          <td class="amount debit">-2,000.00</td>
+          <td>240,756.00</td>
+        </tr>
+        <tr>
+          <td>2023-10-29</td>
+          <td>Jonathan Payment</td>
+          <td>Credit</td>
+          <td class="amount credit">+5,000.00</td>
+          <td>242,756.00</td>
+        </tr>
+        <tr>
+          <td>2023-10-23</td>
+          <td>Jonathan Payment</td>
+          <td>Credit</td>
+          <td class="amount credit">+6,000.00</td>
+          <td>238,756.00</td>
+        </tr>
+        <tr>
+          <td>2023-10-18</td>
+          <td>Larry Payment</td>
+          <td>Credit</td>
+          <td class="amount credit">+3,000.00</td>
+          <td>232,756.00</td>
+        </tr>
+        <tr>
+          <td>2023-10-10</td>
+          <td>Nicole Payment</td>
+          <td>Credit</td>
+          <td class="amount credit">+3,000.00</td>
+          <td>229,756.00</td>
+        </tr>
+        <tr>
+          <td>2023-10-04</td>
+          <td>Groceries</td>
+          <td>Debit</td>
+          <td class="amount debit">-1,000.00</td>
+          <td>226,756.00</td>
+        </tr>
+        <tr>
+          <td>2023-09-30</td>
+          <td>Salary Credit</td>
+          <td>Credit</td>
+          <td class="amount-positive">+ 11,000.00</td>
+          <td>227,256.88</td>
+    <td>Electricity Bill Payment</td>
+          <td>Debit</td>
+          <td class="amount debit">-430.01</td>
+          <td>226,800.98</td>
+        </tr>
+        <tr>
+          <td>2023-09-27</td>
+          <td>Transfer to Eric</td>
+          <td>Debit</td>
+          <td class="amount debit">-3,000.00</td>
+          <td>217,256.88</td>
+        </tr>
+        <tr>
+          <td>2023-09-25</td>
+          <td>Transfer to Nicholas</td>
+          <td>Debit</td>
+          <td class="amount debit">-1,000.00</td>
+          <td>220,256.88</td>
+        </tr>
+        <tr>
+          <td>2023-09-19</td>
+          <td>Kathleen Payment</td>
+          <td>Credit</td>
+          <td class="amount credit">+9,000.00</td>
+          <td>221,256.88</td>
+        </tr>
+        <tr>
+          <td>2023-09-08</td>
+          <td>Groceries</td>
+          <td>Debit</td>
+          <td class="amount debit">-743.25</td>
+          <td>212,256.88</td>
+        </tr>
+        <tr>
+          <td>2023-09-04</td>
+          <td>Dividend Payment</td>
+          <td>Credit</td>
+          <td class="amount credit">+500.00</td>
+          <td>213,000.13</td>
+        </tr>
+        <tr>
+          <td>2023-08-30</td>
+          <td>Salary Credit</td>
+          <td>Credit</td>
+          <td class="amount-positive">+ 12,000.00</td>
+          <td>213,523.17</td>
+    <td>Electricity Bill Payment</td>
+          <td>Debit</td>
+          <td class="amount debit">-620.03</td>
+          <td>212,500.13</td>
+        </tr>
+         <tr>
+          <td>2023-08-24</td>
+          <td>Transfer to Jeffrey</td>
+          <td>Debit</td>
+          <td class="amount debit">-1,000.00</td>
+          <td>203,523.17</td>
+        </tr>
+        <tr>
+          <td>2023-08-22</td>
+          <td>Transfer to Jeffrey</td>
+          <td>Debit</td>
+          <td class="amount debit">-2,200.00</td>
+          <td>204,523.17</td>
+        </tr>
+        <tr>
+          <td>2023-08-19</td>
+          <td>Laura Payment</td>
+          <td>Credit</td>
+          <td class="amount credit">+20,000.00</td>
+          <td>206,523.17</td>
+        </tr>
+          <tr>
+          <td>2023-08-10</td>
+          <td>George Payment</td>
+          <td>Credit</td>
+          <td class="amount credit">+400.00</td>
+          <td>186,523.17</td>
+        </tr>
+        <tr>
+          <td>2023-08-03</td>
+          <td>Groceries</td>
+          <td>Debit</td>
+          <td class="amount debit">-2,150.25</td>
+          <td>186,123.17</td>
+        </tr>
+        <tr>
+          <td>2023-07-30</td>
+          <td>Salary Credit</td>
+          <td>Credit</td>
+          <td class="amount-positive">+ 18,600.00</td>
+          <td>188,691.05</td>
+    <td>Electricity Bill Payment</td>
+          <td>Debit</td>
+          <td class="amount debit">-320.14</td>
+          <td>188,275.03</td>
+        </tr>
+    <tr>
+          <td>2023-07-26</td>
+          <td>Transfer to Rebecca</td>
+          <td>Debit</td>
+          <td class="amount debit">-500.00</td>
+          <td>170,091.05</td>
+        </tr>
+        <tr>
+          <td>2023-07-25</td>
+          <td>Transfer to Timothy</td>
+          <td>Debit</td>
+          <td class="amount debit">-17,000.00</td>
+          <td>170,591.05</td>
+        </tr>
+         <tr>
+          <td>2023-07-20</td>
+          <td>Carol Payment</td>
+          <td>Credit</td>
+          <td class="amount credit">+23,000.00</td>
+          <td>187,591.05</td>
+        </tr>
+        <tr>
+          <td>2023-07-18</td>
+          <td>Carol Payment</td>
+          <td>Credit</td>
+          <td class="amount credit">+15,000.00</td>
+          <td>164,591.05</td>
+        </tr>
+        <tr>
+          <td>2023-07-15</td>
+          <td>Transfer to Jason</td>
+          <td>Debit</td>
+          <td class="amount debit">-20,000.00</td>
+          <td>152,591.05</td>
+        </tr>
+        <tr>
+          <td>2023-07-10</td>
+          <td>Ronald Payment</td>
+          <td>Credit</td>
+          <td class="amount credit">+40,000.00</td>
+          <td>172,591.05</td>
+        </tr>
+        <tr>
+          <td>2023-07-03</td>
+          <td>Groceries</td>
+          <td>Debit</td>
+          <td class="amount debit">-990.25</td>
+          <td>132,591.05</td>
+        </tr>
+        <tr>
+          <td>2023-06-30</td>
+          <td>Salary Credit</td>
+          <td>Credit</td>
+          <td class="amount-positive">+ 21,000.00</td>
+          <td>133,781.45</td>
+    <td>Electricity Bill Payment</td>
+          <td>Debit</td>
+          <td class="amount debit">-250.12</td>
+          <td>133,581.33</td>
+        </tr>
+        <tr>
+          <td>2023-06-27</td>
+          <td>Transfer to Timothy</td>
+          <td>Debit</td>
+          <td class="amount debit">-3,000.00</td>
+          <td>112,781.45</td>
+        </tr>
+        <tr>
+          <td>2023-06-26</td>
+          <td>Transfer to Brian</td>
+          <td>Debit</td>
+          <td class="amount debit">-6,500.00</td>
+          <td>115,781.45</td>
+        </tr>
+        <tr>
+          <td>2023-06-20</td>
+          <td>Transfer to Paul</td>
+          <td>Debit</td>
+          <td class="amount debit">-11,500.00</td>
+          <td>123,281.45</td>
+        </tr>
+        <tr>
+          <td>2023-06-19</td>
+          <td>Transfer to Kenneth</td>
+          <td>Debit</td>
+          <td class="amount debit">-5,000.00</td>
+          <td>134,781.45</td>
+        </tr>
+        <tr>
+          <td>2023-06-16</td>
+          <td>Margaret Payment</td>
+          <td>Credit</td>
+          <td class="amount credit">+1,000.00</td>
+          <td>139,781.45</td>
+        </tr>
+        <tr>
+          <td>2023-06-16</td>
+          <td>Donald Payment</td>
+          <td>Credit</td>
+          <td class="amount credit">+13,000.00</td>
+          <td>138,781.45</td>
+        </tr>
+        <tr>
+          <td>2023-06-12</td>
+          <td>Mark Payment</td>
+          <td>Credit</td>
+          <td class="amount credit">+4,000.00</td>
+          <td>125,781.45</td>
+        </tr>
+        <tr>
+          <td>2023-06-05</td>
+          <td>Emily Payment</td>
+          <td>Credit</td>
+          <td class="amount credit">+12,000.00</td>
+          <td>121,781.45</td>
+        </tr>
+        <tr>
+          <td>2023-06-01</td>
+          <td>Groceries</td>
+          <td>Debit</td>
+          <td class="amount debit">-1,300.25</td>
+          <td>109,781.45</td>
+        </tr>
+        <tr>
+          <td>2023-05-30</td>
+          <td>Salary Credit</td>
+          <td>Credit</td>
+          <td class="amount-positive">+ 19,820.00</td>
+          <td>111,531.75</td>
+    <td>Electricity Bill Payment</td>
+          <td>Debit</td>
+          <td class="amount debit">-450.05</td>
+          <td>111,081.07</td>
+        </tr>
+          <tr>
+          <td>2023-05-28</td>
+          <td>Transfer to Steven</td>
+          <td>Debit</td>
+          <td class="amount debit">-6,000.00</td>
+          <td>91,711.75</td>
+        </tr>
+        <tr>
+          <td>2023-05-23</td>
+          <td>Transfer to Steven</td>
+          <td>Debit</td>
+          <td class="amount debit">-16,000.00</td>
+          <td>97,711.75</td>
+        </tr>
+        <tr>
+          <td>2023-05-17</td>
+          <td>Anthony Payment</td>
+          <td>Credit</td>
+          <td class="amount credit">+8,000.00</td>
+          <td>113,711.75</td>
+        </tr>
+        <tr>
+          <td>2023-05-13</td>
+          <td>Matthew Payment</td>
+          <td>Credit</td>
+          <td class="amount credit">+32,000.00</td>
+          <td>105,711.75</td>
+        </tr>
+        <tr>
+          <td>2023-05-06</td>
+          <td>Groceries</td>
+          <td>Debit</td>
+          <td class="amount debit">-900.25</td>
+          <td>73,711.75</td>
+        </tr>
+        <tr>
+          <td>2023-04-30</td>
+          <td>Salary Credit</td>
+          <td>Credit</td>
+          <td class="amount-positive">+ 20,000.00</td>
+          <td>74,818.49</td>
+    <td>Electricity Bill Payment</td>
+          <td>Debit</td>
+          <td class="amount debit">-220.75</td>
+          <td>74,612.00</td>
+        </tr>
+        <tr>
+          <td>2023-04-27</td>
+          <td>Thomas Payment</td>
+          <td>Credit</td>
+          <td class="amount credit">+3,000.00</td>
+          <td>54,818.49</td>
+        </tr>
+          <tr>
+          <td>2023-04-24</td>
+          <td>Daniel Payment</td>
+          <td>Credit</td>
+          <td class="amount credit">+17,000.75</td>
+          <td>51,818.49</td>
+        </tr>
+         <tr>
+          <td>2023-04-19</td>
+          <td>Transfer to Christopher</td>
+          <td>Debit</td>
+          <td class="amount debit">-10,000.00</td>
+          <td>34,818.49</td>
+        </tr>
+        <tr>
+          <td>2023-04-15</td>
+          <td>Transfer to Karen</td>
+          <td>Debit</td>
+          <td class="amount debit">-1,800.00</td>
+          <td>44,818.49</td>
+        </tr>
+        <tr>
+          <td>2023-04-11</td>
+          <td>Barbara Payment</td>
+          <td>Credit</td>
+          <td class="amount credit">+17,850.75</td>
+          <td>46,618.49</td>
+        </tr>
+        <tr>
+          <td>2023-04-08</td>
+          <td>Groceries</td>
+          <td>Debit</td>
+          <td class="amount debit">-300.25</td>
+          <td>28,767.74</td>
+        </tr>
+        <tr>
+          <td>2023-04-01</td>
+          <td>William  Payment</td>
+          <td>Credit</td>
+          <td class="amount credit">+9,000.00</td>
+          <td>29,067.99</td>
+        </tr>
+        <tr>
+          <td>2023-03-29</td>
+          <td>Salary Credit</td>
+          <td>Credit</td>
+          <td class="amount-positive">+ 12,550.00</td>
+          <td>20,393.11</td>
+    <td>Electricity Bill Payment</td>
+          <td>Debit</td>
+          <td class="amount debit">-325.12</td>
+          <td>20,067.99</td>
+        </tr>
+        <tr>
+          <td>2023-03-14</td>
+          <td>Transfer to Patricia </td>
+          <td>Debit</td>
+          <td class="amount debit">-13,200.00</td>
+          <td>7,843.11</td>
+        </tr>
+        <tr>
+          <td>2023-03-10</td>
+          <td>Robert Payment</td>
+          <td>Credit</td>
+          <td class="amount credit">+6,000.00</td>
+          <td>21,043.11</td>
+        </tr>
+         <tr>
+          <td>2023-03-10</td>
+          <td>James Payment</td>
+          <td>Credit</td>
+          <td class="amount credit">+4,000.00</td>
+          <td>15,043.11</td>
+        </tr>
+        <tr>
+          <td>2023-02-28</td>
+          <td>Groceries</td>
+          <td>Debit</td>
+          <td class="amount debit">-856.15</td>
+          <td>11,043.11</td>
+        </tr>
+        <tr>
+          <td>2023-02-28</td>
+          <td>Salary Credit</td>
+          <td>Credit</td>
+          <td class="amount-positive">+ 8,000.00</td>
+          <td>12,450.75</td>
+    <td>Electricity Bill Payment</td>
+          <td>Debit</td>
+          <td class="amount debit">-550.75</td>
+          <td>11,899.26</td>
+        </tr>
+        <tr>
+          <td>2023-02-15</td>
+          <td>Transfer to John Doe</td>
+          <td>Debit</td>
+          <td class="amount debit">-11,200.00</td>
+          <td>4,450.75</td>
+        </tr>
+        <tr>
+          <td>2023-01-10</td>
+          <td>Dividend Payment</td>
+          <td>Credit</td>
+          <td class="amount credit">+400.00</td>
+          <td>17,850.75</td>
+        </tr>
+        <tr>
+          <td>2023-01-08</td>
+          <td>Groceries</td>
+          <td>Debit</td>
+          <td class="amount debit">-1000.25</td>
+          <td>17,450.75</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    © 2025 Wellington Private Bank. Confidential & Secure.
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Transfer Funds - Wellington Private Bank</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background: #f5f2ed;
+      color: #2b2b2b;
+      margin: 0;
+    }
+
+    header {
+      background: #1c1c1c;
+      color: #d4af37;
+      text-align: center;
+      padding: 30px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+
+    button {
+      margin-top: 30px;
+      width: 100%;
+      padding: 15px;
+      background: #d4af37;
+      border: none;
+      border-radius: 30px;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+        background: #b89a2d;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Transfer Funds</h1>
+  </header>
+
+  <div class="container">
+    <form>
+      <label>From Account</label>
+      <select>
+        <option>Checking - 2,329,700</option>
+        <option>Savings -500,000</option>
+      </select>
+
+      <label>To Account Number</label>
+      <input type="text" placeholder="e.g. 1234567890" required />
+
+      <label>Amount</label>
+      <input type="number" placeholder="$" required />
+
+      <label>Note</label>
+      <input type="text" placeholder="Optional" />
+
+      <button id="transactionBtn" onclick="showError()">Transfer Funds</button>
+    </form>
+  </div>
+
+  <div id="errorBox" style="display:none; position:fixed; top:20%; left:50%; transform:translateX(-50%);
+background:#fff0f0; color:#a00; padding:20px 30px; border:1px solid #a00; border-radius:10px;
+box-shadow:0 0 15px rgba(0,0,0,0.1); font-family:'Georgia',serif; z-index:1000;">
+  <strong>Error:</strong> You can’t make a transaction at the moment.
+</div>
+<script>
+  function showError() {
+    const box = document.getElementById('errorBox');
+    const btn = document.getElementById('transactionBtn');
+    
+    box.style.display = 'block';
+    btn.disabled = true;
+    btn.style.opacity = '0.5';
+    btn.innerText = 'Try Again Later';
+
+    setTimeout(() => {
+      box.style.display = 'none';
+      btn.disabled = false;
+      btn.style.opacity = '1';
+      btn.innerText = 'Transfer Funds';
+    }, 4000);
+  }
+</script>
+  <footer>
+    <p>&copy; 2023 Wellington Private Bank. All rights reserved.</p>
+</body>
+</html>

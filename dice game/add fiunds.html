@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Funds - Wellington Private Bank</title>
+  <link rel="stylesheet" href="">
+  <style>
+    body {
+  font-family: 'Georgia', serif;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 40px;
+  color: #1a1a1a;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  background: #fff;
+ padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+  color: #d4af37;
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background:#d4af37 ;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  width: 100%;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background:#d4af37;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Wellington Private Bank</h1>
+    <h2>Add Funds to Your Account</h2>
+    
+   <form id="addFundsForm">
+  <label for="account">Account Number:</label>
+  <input type="text" id="account" required>
+
+  <label for="amount">Amount ($):</label>
+  <input type="number" id="amount" required>
+
+  <label for="method">Payment Method:</label>
+  <select id="method">
+    <option value="bank">Bank Transfer</option>
+    <option value="card">Debit/Credit Card</option>
+  </select>
+
+  <button type="submit">Add Funds</button>
+</form>
+
+<p id="successMsg" style="display: none; color: green;">Funds added successfully!</p>
+  </div>
+  <script>
+    document.getElementById('addFundsForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  const accountNumber = document.getElementById('account').value;
+  const amount = parseFloat(document.getElementById('amount').value);
+
+  try {
+    const res = await fetch('http://localhost:5000/api/users/add-funds', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ accountNumber, amount })
+      });
+
+    const data = await res.json();
+
+    if (res.ok) {
+      document.getElementById('successMsg').innerText = data.message;
+      document.getElementById('successMsg').style.display = 'block';
+    } else {
+      alert(data.message || 'Error adding funds');
+    }
+  } catch (err) {
+    alert('Could not connect to server');
+  }
+});
+  </script>
+</body>
+</html>

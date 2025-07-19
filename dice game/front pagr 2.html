@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wellington Private Bank - Account Overview</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: #f5f2ed;
+      color: #2b2b2b;
+    }
+
+    header {
+      background-color: #1c1c1c;
+      color: #d4af37;
+      padding: 30px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      background: #2a2a2a;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #f5f2ed;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    }
+
+    .balance-box {
+      background: #1c1c1c;
+      color: #d4af37;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .balance-box h2 {
+        margin: 0;
+      font-size: 2.2em;
+    }
+
+    .balance-box p {
+      font-size: 1.1em;
+      color: #ccc;
+      margin-top: 10px;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .actions button {
+      padding: 15px 30px;
+      background: #d4af37;
+      border: none;
+      border-radius: 30px;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .actions button:hover {
+      background: #b89a2d;
+    }
+
+    footer {
+      background: #1c1c1c;
+      color: #999;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      margin-top: 50px;
+    }
+    .user-info {
+      
+      color:#fff;
+      float: right;
+    
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Wellington Private Bank</h1>
+  <a href="/profile.html">
+ <div class="user-info">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+</svg><p>profile</p>
+ </div></a>
+ </header>
+ 
+  <nav>
+    <a href="/front pagr 2.html">Home</a>
+    <a href="/transfers.html">Transfer</a>
+    <a href="/investments.html">Assets</a>
+    <a href="/Settings.html">Settings</a>
+  </nav>
+
+  <div class="container">
+    <div class="balance-box">
+      <h2>$2,450,000.00</h2>
+      <p>Available Balance</p>
+    </div>
+
+    <div class="actions">
+     <a href="/transfers.html"><button>Transfer Funds</button></a> 
+     <a href="/investments.html"> <button>View Investments</button></a>
+     <a href="/Transaction history.html"> <button> Transaction History</button></a>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Wellington Private Bank. Confidential & Secure.
+  </footer>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</html>
